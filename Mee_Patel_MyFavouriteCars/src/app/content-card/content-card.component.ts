@@ -7,8 +7,6 @@ import { ContentList } from '../helper-files/content-list';
   templateUrl: './content-card.component.html',
   styleUrls: ['./content-card.component.scss']
 })
-export class ContentCardComponent  {
-  contentList: ContentList;
 
   constructor() {
     this.contentList = new ContentList();
