@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { ContentList } from '../helper-files/content-list';
-
+import { Component, Input } from '@angular/core';
+import { Content } from '../helper-files/content-interface';
 
 @Component({
   selector: 'app-content-card',
@@ -8,17 +7,7 @@ import { ContentList } from '../helper-files/content-list';
   styleUrls: ['./content-card.component.scss']
 })
 
-  constructor() {
-    this.contentList = new ContentList();
-    this.contentList.addContent({
-      id: 1,
-      title: 'BMW',
-      description: 'Car',
-      creator: 'BMW',
-      imgURL: '',
-      type: 'Car',
-      tags: ['1,2']
-    });
-   
-  }
+
+export class ContentCardComponent {
+  @Input() content: Content;
 }

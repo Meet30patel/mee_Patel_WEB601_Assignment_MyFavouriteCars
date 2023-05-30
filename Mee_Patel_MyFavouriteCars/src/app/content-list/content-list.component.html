@@ -1,6 +1,22 @@
-<app-content-card
-  *ngFor="let content of contentList.slice(0, 5)"
- 
+<div>
+  <input type="text" [(ngModel)]="searchTitle" placeholder="Enter your title">
+  <button (click)="searchByTitle()">Search</button>
+  <p [ngStyle]="{ color: searchResult ? 'green' : 'red' }">
+    {{ searchMessage }}
+  </p>
+</div>
+  
+<h3>No Type</h3>
+<app-content-card *ngFor="let content of contents | contentTypeFilter:''" [content] = "content">
 
-  [class.border]="content.id === 1"
-></app-content-card>
+</app-content-card>
+
+<h3>Sports Cars</h3>
+<app-content-card *ngFor="let content of contents | contentTypeFilter: 'Sports'" [content] = "content">
+
+</app-content-card>
+
+<h3>Regular Cars</h3>
+<app-content-card *ngFor="let content of contents | contentTypeFilter: 'Car'" [content] = "content">
+  
+</app-content-card>
