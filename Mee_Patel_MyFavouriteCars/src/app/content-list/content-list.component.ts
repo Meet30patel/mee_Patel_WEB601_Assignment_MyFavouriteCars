@@ -38,7 +38,51 @@ export class ContentListComponent {
       imgURL: 'https://www.topgear.com/sites/default/files/2021/08/2010-Pagani-Zonda-R-Evolution-_0.jpg',
       type: 'Car',
       tags: ['1,2']
+    },
+
+    {
+      id: 4,
+      title: 'cadilac SUV',
+      description: 'Car',
+      creator: 'cadilac',
+      imgURL: 'https://www.cadillaccanada.ca/content/dam/cadillac/na/canada/english/index/crossover-suvs/2023-escalade/jellybean/vehicles-suvs-23-escalade.png?imwidth=960',
+      type: 'Car',
+      tags: ['1,2']
+    },
+
+    {
+      id: 5,
+      title: 'G-wagon',
+      description: 'Car',
+      creator: 'mercedes',
+      imgURL: 'https://www.motortrend.com/uploads/2022/02/2022-Mercedes-Benz-G-Class-AMG-G63-22.jpg?fit=around%7C875:492.1875',
+      type: 'Car',
+      tags: ['1,2']
+    },
+
+    {
+      id: 6,
+      title: 'lambo gallardo',
+      description: 'Car',
+      creator: 'lambo',
+      imgURL: 'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/masterpieces/gallardo-2003/HEADER.jpg',
+      type: 'Car',
+      tags: ['1,2']
+    },
+
+    {
+      id: 7,
+      title: 'lambo urus',
+      description: 'Car',
+      creator: 'lambo',
+      imgURL: 'https://www.motortrend.com/uploads/2022/10/2023-Lamborghini-Urus-Performante-31.jpg?fit=around%7C875:492.1875',
+      type: 'Car',
+      tags: ['1,2']
     }
+
+
+
+
   ];
 
   searchTitle: string = '';
