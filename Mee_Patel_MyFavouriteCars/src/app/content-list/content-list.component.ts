@@ -23,7 +23,7 @@ export class ContentListComponent {
     {
       id: 2,
       title: 'Nissan Gtr',
-      description: 'Car',
+      description: 'sports',
       creator: 'Nissan',
       imgURL: 'https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Nissan-GTR/744/front-left-side-47.jpg?tr=h-140',
       type: 'Sports',
@@ -33,10 +33,10 @@ export class ContentListComponent {
     {
       id: 3,
       title: 'Pagani Zonda',
-      description: 'Car',
+      description: 'sports',
       creator: 'pagani',
       imgURL: 'https://www.topgear.com/sites/default/files/2021/08/2010-Pagani-Zonda-R-Evolution-_0.jpg',
-      type: 'Car',
+      type: 'Sports',
       tags: ['1,2']
     },
 
@@ -63,10 +63,10 @@ export class ContentListComponent {
     {
       id: 6,
       title: 'lambo gallardo',
-      description: 'Car',
+      description: 'sports',
       creator: 'lambo',
       imgURL: 'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/masterpieces/gallardo-2003/HEADER.jpg',
-      type: 'Car',
+      type: 'Sports',
       tags: ['1,2']
     },
 
