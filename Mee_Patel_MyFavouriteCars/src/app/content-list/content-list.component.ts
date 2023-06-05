@@ -75,7 +75,7 @@ export class ContentListComponent {
       title: 'lambo urus',
       description: 'Car',
       creator: 'lambo',
-      imgURL: 'https://www.motortrend.com/uploads/2022/10/2023-Lamborghini-Urus-Performante-31.jpg?fit=around%7C875:492.1875',
+      imgURL: '',
       type: 'Car',
       tags: ['1,2']
     }
