@@ -28,7 +28,7 @@ export class HoverAffectDirective {
       case 'font-weight':
         return 'bold';
       case 'border':
-        return '2px solid blue';
+        return '2px solid black';
       default:
         return '';
     }
