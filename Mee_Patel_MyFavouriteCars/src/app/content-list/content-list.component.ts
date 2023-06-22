@@ -93,4 +93,9 @@ export class ContentListComponent {
     this.searchResult = this.contents.some(content => content.title.toLowerCase() === this.searchTitle.toLowerCase());
     this.searchMessage = this.searchResult ? `Content with title "${this.searchTitle}" exists.` : `Content with title "${this.searchTitle}" doesn't exist.`;
   }
+  
+  addContent(newContent: Content) {
+    this.contents.push(newContent);
+    this.contents = [...this.contents]; 
+  }
 }

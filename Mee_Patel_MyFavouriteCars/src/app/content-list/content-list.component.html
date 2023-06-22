@@ -1,3 +1,4 @@
+<app-create-content (createContentEvent)="addContent($event)"></app-create-content>
 <div>
   <input type="text" [(ngModel)]="searchTitle" placeholder="Enter your title">
   <button (click)="searchByTitle()">Search</button>
@@ -20,3 +21,10 @@
 <app-content-card *ngFor="let content of contents | contentTypeFilter: 'Car'" [content] = "content">
   
 </app-content-card>
+<div *ngFor="let item of contents.slice(-1)" style="text-align: center; border: 5px solid #240c0c;">
+  <h1>{{item.id}}</h1>
+  <h2>{{ item.title }}</h2>
+  <h2>{{ item.description }}</h2>
+  <h2>{{ item.creator }}</h2>
+
+</div>
