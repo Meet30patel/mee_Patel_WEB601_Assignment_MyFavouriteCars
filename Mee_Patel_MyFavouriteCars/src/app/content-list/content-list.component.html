@@ -1,30 +1,37 @@
-<app-create-content (createContentEvent)="addContent($event)"></app-create-content>
-<div>
-  <input type="text" [(ngModel)]="searchTitle" placeholder="Enter your title">
-  <button (click)="searchByTitle()">Search</button>
-  <p [ngStyle]="{ color: searchResult ? 'green' : 'red' }">
-    {{ searchMessage }}
-  </p>
-</div>
-  
-<h3>No Type</h3>
-<app-content-card *ngFor="let content of contents | contentTypeFilter:''" [content] = "content">
+<main>
+  <section class="searchForTitle">
+      <div>
+          <input type="text" [(ngModel)]="searchTitle" placeholder="Search Title here...">
+          <button (click)="searchByTitle()">Search</button>
+      </div>
+      <div *ngIf="titleFound !== null">
+          <p [style.color]="titleFound ? 'green' : 'red'">
+              {{titleFound ? 'Car Exist' : 'Car Not Exist'}}
+          </p>
+      </div>
+  </section>
 
-</app-content-card>
+  <h1>Cars with No Type</h1>
 
-<h3>Sports Cars</h3>
-<app-content-card *ngFor="let content of contents | contentTypeFilter: 'Sports'" [content] = "content">
+  <section class="cards">
+      <div *ngFor="let content of contents | contentTypeFilter:''" hoverAffect="border">
+          <app-content-card [song]="content" [class]="''"></app-content-card>
+      </div>
+  </section>
 
-</app-content-card>
+  <h1>Sports Cars</h1>
 
-<h3>Regular Cars</h3>
-<app-content-card *ngFor="let content of contents | contentTypeFilter: 'Car'" [content] = "content">
-  
-</app-content-card>
-<div *ngFor="let item of contents.slice(-1)" style="text-align: center; border: 5px solid #240c0c;">
-  <h1>{{item.id}}</h1>
-  <h2>{{ item.title }}</h2>
-  <h2>{{ item.description }}</h2>
-  <h2>{{ item.creator }}</h2>
+  <section class="cards">
+      <div *ngFor="let content of contents | contentTypeFilter:'Sports'" hoverAffect="border">
+          <app-content-card [song]="content" [class]="'Sports'"></app-content-card>
+      </div>
+  </section>
 
-</div>
+  <h1>Car</h1>
+
+  <section class="cards">
+      <div *ngFor="let content of contents | contentTypeFilter:'Car'" hoverAffect="border">
+          <app-content-card [song]="content" [class]="'Car'"></app-content-card>
+      </div>
+  </section>
+</main>
